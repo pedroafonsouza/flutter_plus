@@ -147,7 +147,7 @@ class _ContainerPlusState extends State<ContainerPlus> {
   @override
   void initState() {
     // close previus keyboard (add to navigatorObservers)
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       // delay principalmente para casos por exemplo que o teclado está aberto
       Future.delayed(Duration(microseconds: 50), _afterLayout);
     });
